@@ -119,14 +119,5 @@ def generate_multilateral_settlement(trades):
 
 
 def _balance_ccp_residuals(instructions):
-    """Adjust settlement amounts to maintain CCP balance after rounding.
-
-    After rounding to currency-specific precision, the CCP's total
-    receipts may differ from total payments by a small rounding residual.
-    This must be corrected so the CCP has exactly zero net position
-    in each currency on each value date.
-
-    The party with the largest settlement amount in the affected
-    currency/date group absorbs the residual adjustment.
-    """
+    """Adjust settlement amounts to ensure CCP balance after rounding."""
     return instructions
