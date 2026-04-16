@@ -112,12 +112,4 @@ def generate_multilateral_settlement(trades):
                 currency=ccy, amount=rounded, value_date=vd,
             ))
 
-    # Step 4: Balance adjustment for rounding residuals
-    instructions = _balance_ccp_residuals(instructions)
-
-    return instructions
-
-
-def _balance_ccp_residuals(instructions):
-    """Adjust settlement amounts to ensure CCP balance after rounding."""
     return instructions
